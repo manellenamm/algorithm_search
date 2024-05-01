@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select City</title>
+</head>
+<body>
+    <h1>Select City</h1>
+    <form action="/select_city" method="POST">
+        <label for="city">Choose a city:</label>
+        <select name="city" id="city">
+            {% if cities %}
+                {% for city in cities %}
+                    <option value="{{ city }}">{{ city }}</option>
+                {% endfor %}
+            {% endif %}
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
