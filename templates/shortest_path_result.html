@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,5 +9,47 @@
   
     <h2>Shortest Path Visualization:</h2>
     <img src="data:image/png;base64,{{ plot_url }}" alt="Shortest Path Visualization">
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortest Path Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        img {
+            max-width: 90%; /* Adjust the width of the image */
+            height: auto;
+            display: block;
+            margin: 0 auto; /* Center the image horizontally */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Shortest Path Visualization:</h2>
+        <img src="data:image/png;base64,{{ plot_url }}" alt="Shortest Path Visualization">
+    </div>
 </body>
 </html>

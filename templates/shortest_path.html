@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <title>Shortest Path</title>
@@ -22,5 +22,89 @@
         <br>
         <input type="submit" value="Find Shortest Path">
     </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shortest Path</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        select, input[type="submit"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Find Shortest Path</h1>
+        <form action="/shortest_path" method="POST">
+            <label for="source">Source:</label>
+            <select name="source" id="source">
+                {% for node_id in node_ids %}
+                    <option value="{{ node_id }}">{{ node_id }}</option>
+                {% endfor %}
+            </select>
+            
+            <label for="target">Target:</label>
+            <select name="target" id="target">
+                {% for node_id in node_ids %}
+                    <option value="{{ node_id }}">{{ node_id }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <input type="submit" value="Find Shortest Path">
+        </form>
+    </div>
 </body>
 </html>
